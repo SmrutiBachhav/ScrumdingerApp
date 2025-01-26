@@ -24,6 +24,14 @@ struct ScrumsView: View {
                     CardView(scrum: scrum)
                 }
                 .listRowBackground(scrum.theme.mainColor)
+                .swipeActions(edge: .trailing) {
+                    Button(role: .destructive){
+                        scrums.removeAll { $0.id == scrum.id }
+                    } label: {
+                        Label("", systemImage: "trash")
+                    }
+                    .foregroundColor(.white)
+                }
             }
             .navigationTitle("Daily Scrums")
             .toolbar{
