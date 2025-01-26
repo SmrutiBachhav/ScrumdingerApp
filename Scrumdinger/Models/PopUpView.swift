@@ -14,7 +14,7 @@ struct PopUpView: View {
             VStack {
                 Text("Meeting will finish in a while! ")
                     .font(.headline)
-                Text("Go Back or click \"Dismiss\" to end the meeting.")
+                Text("Go Back or click \'Dismiss\' to end the meeting.")
                     .font(.caption)
             }
             .padding()
